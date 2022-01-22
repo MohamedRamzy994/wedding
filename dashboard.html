@@ -1,0 +1,147 @@
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم</title>
+
+    <link rel="stylesheet" href="css/bootstrap.rtl.css">
+
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.css">
+
+</head>
+
+<body>
+    <header class="navbar sticky-top flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="index.html"> ستوديو البحراوى</a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="عرض/إخفاء لوحة التنقل">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <input class="form-control w-100" type="text" placeholder="بحث" aria-label="بحث">
+        <div class="navbar-nav">
+            <div class="nav-item text-nowrap">
+                <a class="nav-link px-3" href="dashboard.html">تسجيل الخروج</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="dashboard.html">
+                                <span class="fas fa-home"></span> لوحة القيادة
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dash-exwork.html">
+                                <span class="fas fa-photo-video"></span> معرض الأعمال
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dash-exphotos.html">
+                                <span class="fas fa-photo-video"></span> الأعمال السابقة
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dash-teamwork.html">
+                                <span class="fas fa-users"></span> فريق العمل
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dash-teamwork.html">
+                                <span class="fas fa-edit"></span> رأى العملاء
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-auto mt-3 col-lg-10 px-md-4">
+
+                <div class="row">
+                    <div class="col-md-3  p-3">
+                        <div class="card text-white bg-success mb-3">
+                            <div class="card-header">المستخدمين</div>
+                            <div class="card-body">
+                                <h5 class="card-title text-center"><i class="fas fa-user fa-2x"></i></h5>
+                                <p class="card-text text-center">55</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3  p-3">
+                        <div class="card text-white bg-danger mb-3">
+                            <div class="card-header">معرض الأعمال</div>
+                            <div class="card-body">
+                                <h5 class="card-title text-center"><i class="fas fa-photo-video fa-2x"></i></h5>
+                                <p class="card-text text-center">55</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3  p-3">
+                        <div class="card text-white bg-warning mb-3">
+                            <div class="card-header">الأعمال السابقة</div>
+                            <div class="card-body">
+                                <h5 class="card-title text-center"><i class="fas fa-photo-video fa-2x"></i></h5>
+                                <p class="card-text text-center">55</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 p-3">
+                        <div class="card text-white bg-info mb-3">
+                            <div class="card-header">أراء العملاء</div>
+                            <div class="card-body">
+                                <h5 class="card-title text-center"><i class="fas fa-edit fa-2x"></i></h5>
+                                <p class="card-text text-center">55</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row md-2" id="cover">
+                    <div id='calendar'></div>
+                </div>
+
+
+
+            </main>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="./js/dashboard.js"></script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                timeZone: 'UTC',
+                themeSystem: 'standard',
+                headerToolbar: {
+                    left: 'prev,next,today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+                },
+                weekNumbers: true,
+                dayMaxEvents: true, // allow "more" link when too many events
+                events: 'https://fullcalendar.io/demo-events.json'
+            });
+
+            calendar.render();
+        });
+    </script>
+</body>
+
+</html>

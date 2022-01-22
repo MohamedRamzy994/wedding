@@ -1,0 +1,121 @@
+<html lang="en" dir="rtl">
+
+<head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> ستوديو البحراوى</title>
+
+        <link rel="stylesheet" href="css/bootstrap.rtl.css">
+
+        <link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="css/signin.css">
+
+
+
+    </head>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <i class="fas fa-arrow-circle-right  align-middle"></i>
+                        <span class="align-middle"> العودة الى الصفحة الرئيسية  </span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-6 offset-md-3 offset-sm-0 me-5 mt-5">
+                <div class="card border-primary mb-3 ">
+                    <div class="card-header text-center">تسجيل الدخول</div>
+                    <div class="card-body text-primary">
+                        <h5 class="card-title text-center">اذا كنت تمتلك حساب يمكنك التسجيل الأن</h5>
+                        <form class="row  needs-validation" novalidate>
+                            <div class="col-md-12">
+                                <label for="validationCustom01" class="form-label">اسم المستخدم </label>
+                                <input type="text" class="form-control" id="validationCustom01" placeholder="اسم المستخدم" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="validationCustom02" class="form-label">كلمة المرور </label>
+                                <input type="text" class="form-control" id="validationCustom02" placeholder="كلمة المرور" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 mt-lg-3">
+                                <a class="btn btn-primary float-start" href="dashboard.html">دخول</a>
+
+                            </div>
+                            <div class="divider"></div>
+                            <div class="col-md-12">
+
+                                <h5 class="card-title text-center"> تسجيل دخول من خلال شبكات التواصل الاجتماعى</h5>
+
+                                <a href="#" class="fb btn">
+                                    <i class="fa fa-facebook fa-fw"></i> تسجيل دخول فيسبوك
+                                </a>
+                                <a href="#" class="twitter btn">
+                                    <i class="fa fa-twitter fa-fw"></i> تسجيل دخول تويتر
+                                </a>
+                                <a href="#" class="google btn">
+                                    <i class="fa fa-google fa-fw"></i> تسجيل دخول جوجل
+                                </a>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+
+</body>
+
+</html>

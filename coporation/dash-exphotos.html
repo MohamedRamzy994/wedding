@@ -1,0 +1,342 @@
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> الأعمال السابقة </title>
+
+    <link rel="stylesheet" href="css/bootstrap.rtl.css">
+
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.css">
+
+</head>
+
+<body>
+    <header class="navbar sticky-top flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="index.html"> ستوديو البحراوى</a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="عرض/إخفاء لوحة التنقل">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <input class="form-control w-100" type="text" placeholder="بحث" aria-label="بحث">
+        <div class="navbar-nav">
+            <div class="nav-item text-nowrap">
+                <a class="nav-link px-3" href="signin.html">تسجيل الخروج</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="dashboard.html">
+                                <span class="fas fa-home"></span> لوحة القيادة
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dash-exwork.html">
+                                <span class="fas fa-photo-video"></span> معرض الأعمال
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dash-exphotos.html">
+                                <span class="fas fa-photo-video"></span> الأعمال السابقة
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dash-teamwork.html">
+                                <span class="fas fa-users"></span> فريق العمل
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dash-teamwork.html">
+                                <span class="fas fa-edit"></span> رأى العملاء
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-auto mt-3 col-lg-10 px-md-4">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                         إضافة عمل جديد
+                        </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+
+                                <div class="card border-primary mb-3">
+                                    <div class="card-header">إضافة عمل </div>
+                                    <div class="card-body text-primary">
+                                        <h5 class="card-title">يمكنك إضافة عمل جديد مثل فوتو سيشن وتصوير مناسبة او حفلات او هدايا مطبوعة</h5>
+                                        <p class="card-text">
+
+                                            <form class="row g-3 needs-validation" novalidate>
+
+                                                <div class="col-md-12">
+                                                    <label for="validationCustom02" class="form-label">الوصف </label>
+                                                    <input type="text" class="form-control" id="validationCustom02" placeholder="الوصف" required>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-12">
+                                                    <div class="mb-3">
+                                                        <label for="formFile" class="form-label">الصورة الأساسية   </label>
+                                                        <!-- Upload  -->
+                                                        <div id="file-upload-form" class="uploader">
+                                                            <input id="file-upload" type="file" name="fileUpload" accept="image/*" />
+
+                                                            <label for="file-upload" id="file-drag">
+      <img id="file-image" src="#" alt="Preview" class="hidden">
+      <div id="start">
+        <i class="fa fa-download" aria-hidden="true"></i>
+        <div>Select a file or drag here</div>
+        <div id="notimage" class="hidden">Please select an image</div>
+        <span id="file-upload-btn" class="btn btn-primary">Select a file</span>
+      </div>
+      <div id="response" class="hidden">
+        <div id="messages"></div>
+        <progress class="progress" id="file-progress" value="0">
+          <span>0</span>%
+        </progress>
+      </div>
+    </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <button class="btn btn-primary" type="submit"> حفظ</button>
+                                                </div>
+
+                                            </form>
+
+                                        </p>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                          جدول الأعمال السابقة
+                        </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <table class="table table-bordered table-responsive">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">كود</th>
+                                            <th scope="col">الوصف</th>
+                                            <th scope="col">الصورة</th>
+                                            <th scope="col">التفاصيل</th>
+
+
+
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td> حفل زفاف العروسين أحمد ومنة بارك الله لهما وبارك عليهما بالخير</td>
+
+                                            <td><img src="imgs/2.jpg" alt="" class="img-fluid rounded" style="width: 5rem;"></td>
+                                            <td>
+                                                <button class="btn btn-success">تعديل</button>
+                                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">حذف</button>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td> حفل زفاف العروسين أحمد ومنة بارك الله لهما وبارك عليهما بالخير</td>
+
+                                            <td><img src="imgs/2.jpg" alt="" class="img-fluid rounded" style="width: 5rem;"></td>
+
+                                            <td>
+                                                <button class="btn btn-success">تعديل</button>
+                                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">حذف</button>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td> حفل زفاف العروسين أحمد ومنة بارك الله لهما وبارك عليهما بالخير</td>
+
+                                            <td><img src="imgs/2.jpg" alt="" class="img-fluid rounded" style="width: 5rem;"></td>
+                                            <td>
+                                                <button class="btn btn-success">تعديل</button>
+                                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">حذف</button>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td> حفل زفاف العروسين أحمد ومنة بارك الله لهما وبارك عليهما بالخير</td>
+
+                                            <td><img src="imgs/2.jpg" alt="" class="img-fluid rounded" style="width: 5rem;"></td>
+                                            <td>
+                                                <button class="btn btn-success">تعديل</button>
+                                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">حذف</button>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td> حفل زفاف العروسين أحمد ومنة بارك الله لهما وبارك عليهما بالخير</td>
+
+                                            <td><img src="imgs/2.jpg" alt="" class="img-fluid rounded" style="width: 5rem;"></td>
+
+                                            <td>
+                                                <button class="btn btn-success">تعديل</button>
+                                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">حذف</button>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td> حفل زفاف العروسين أحمد ومنة بارك الله لهما وبارك عليهما بالخير</td>
+
+                                            <td><img src="imgs/2.jpg" alt="" class="img-fluid rounded" style="width: 5rem;"></td>
+                                            <td>
+                                                <button class="btn btn-success">تعديل</button>
+                                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">حذف</button>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td> حفل زفاف العروسين أحمد ومنة بارك الله لهما وبارك عليهما بالخير</td>
+
+                                            <td><img src="imgs/2.jpg" alt="" class="img-fluid rounded" style="width: 5rem;"></td>
+                                            <td>
+                                                <button class="btn btn-success">تعديل</button>
+                                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">حذف</button>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td> حفل زفاف العروسين أحمد ومنة بارك الله لهما وبارك عليهما بالخير</td>
+
+                                            <td><img src="imgs/2.jpg" alt="" class="img-fluid rounded" style="width: 5rem;"></td>
+
+                                            <td>
+                                                <button class="btn btn-success">تعديل</button>
+                                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">حذف</button>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td> حفل زفاف العروسين أحمد ومنة بارك الله لهما وبارك عليهما بالخير</td>
+
+                                            <td><img src="imgs/2.jpg" alt="" class="img-fluid rounded" style="width: 5rem;"></td>
+                                            <td>
+                                                <button class="btn btn-success">تعديل</button>
+                                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">حذف</button>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td> حفل زفاف العروسين أحمد ومنة بارك الله لهما وبارك عليهما بالخير</td>
+
+                                            <td><img src="imgs/2.jpg" alt="" class="img-fluid rounded" style="width: 5rem;"></td>
+                                            <td>
+                                                <button class="btn btn-success">تعديل</button>
+                                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">حذف</button>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td> حفل زفاف العروسين أحمد ومنة بارك الله لهما وبارك عليهما بالخير</td>
+
+                                            <td><img src="imgs/2.jpg" alt="" class="img-fluid rounded" style="width: 5rem;"></td>
+
+                                            <td>
+                                                <button class="btn btn-success">تعديل</button>
+                                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">حذف</button>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td> حفل زفاف العروسين أحمد ومنة بارك الله لهما وبارك عليهما بالخير</td>
+
+                                            <td><img src="imgs/2.jpg" alt="" class="img-fluid rounded" style="width: 5rem;"></td>
+                                            <td>
+                                                <button class="btn btn-success">تعديل</button>
+                                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">حذف</button>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+            </main>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="./js/dashboard.js"></script>
+
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"> تأكيد عملية الحذف</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    متأكد أنك تريد حذف هذا العنصر ؟
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                    <button type="button" class="btn btn-success">حفظ </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

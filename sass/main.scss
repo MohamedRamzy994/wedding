@@ -1,0 +1,292 @@
+@import "customevariables";
+@import "https://fonts.googleapis.com/earlyaccess/droidarabickufi.css";
+@import "fontawesome.scss";
+@import "core.scss";
+@import "solid.scss";
+body {
+    background-color: $background-color;
+    color: $color;
+    direction: $direction;
+    font-family: 'Droid Arabic Kufi', serif;
+    font-weight: normal;
+    font-style: normal;
+    overflow-x: hidden;
+    padding-right: 30px;
+}
+
+.container-fluid {
+    padding: 0px !important;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header {
+    background-color: $background-color;
+    color: #023e8a;
+    font-family: $font-family, serif;
+    height: 100%;
+    .logo {
+        padding: 15px;
+        color: #003566;
+    }
+    .header_menu {
+        background-color: #023e8a;
+        ul {
+            .nav-link {
+                padding: 5px 10px;
+                color: #fff;
+                // display: inline-block;
+                // &::after {
+                //     content: '/';
+                // }
+            }
+        }
+        .navbar-toggler {
+            color: #fff;
+        }
+        .navbar-toggler-icon::before {
+            @extend %fa-icon;
+            @extend .fas;
+            content: fa-content($fa-var-bars);
+        }
+    }
+    .contactinfo {
+        background-color: #023e8a;
+        color: #fff;
+        .infoitem {
+            padding: 15px;
+            font-size: 1em;
+            font-weight: normal;
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+    .logorow {
+        .banner {
+            text-align: center;
+            padding-top: 15px;
+        }
+    }
+}
+
+.ourservices {
+    font-family: $font-family;
+    background-color: #fff;
+    text-align: center;
+    color: #003566;
+    border: #fff 1px solid;
+    padding: 20px;
+    margin: 10px 0px;
+    span {
+        background-color: #003566;
+        color: #fff;
+        padding: 10px;
+        border-radius: 3px;
+        box-shadow: 10px 10px 8px #888888;
+    }
+}
+
+.services {
+    background: url(../imgs/about2.jpg) no-repeat #fff;
+    background-position: center;
+    background-size: cover;
+    min-height: 80%;
+    font-family: $font-family;
+    line-height: 2em;
+    padding-top: 10px;
+    .services_subtitle {
+        text-align: center;
+        color: #03045e;
+        margin-top: 20%;
+    }
+    .services_p {
+        text-align: justify;
+        color: #03045e;
+        padding: 20px;
+    }
+}
+
+.boxinfo {
+    margin: 20px;
+    border: 1px solid #023e8a;
+    min-height: 20vh;
+    text-align: center;
+    color: #023e8a;
+    font-family: $font-family;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 8px #888888;
+}
+
+.gallery {
+    padding-right: 20px;
+    img {
+        height: 40vh;
+        width: 100%;
+    }
+    .card {
+        margin: 5px;
+        font-family: $font-family;
+        color: #003566;
+    }
+}
+
+.team {
+    padding-right: 20px;
+    img {
+        height: 40vh;
+        width: 100%;
+    }
+    .card {
+        font-family: $font-family;
+        color: #003566;
+        margin: 5px;
+    }
+}
+
+footer {
+    background-color: #023e8a;
+    width: 100vw;
+    height: 100%;
+    padding: 10px;
+    padding-right: 20px;
+    color: #fff;
+    ul li {
+        font-family: $font-family;
+        color: #fff;
+        list-style: none;
+        line-height: 2em;
+    }
+    ul li::before {
+        @extend %fa-icon;
+        @extend .fas;
+        content: fa-content($fa-var-angle-up);
+        padding: 5px;
+    }
+    .services_p {
+        font-family: $font-family;
+        padding: 10px;
+    }
+    .copyright {
+        color: #fff;
+        font-family: $font-family;
+        text-align: center;
+        border-top: 1px solid #fff;
+    }
+    i {
+        padding: 0.5em;
+    }
+    h4 {
+        font-family: $font-family;
+    }
+}
+
+.photogallery {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.contactus {
+    h4 {
+        text-align: center;
+        font-family: $font-family;
+        color: #003566;
+        margin-bottom: 20px;
+    }
+    i {
+        text-align: center;
+        color: #003566;
+    }
+    div {
+        text-align: center;
+    }
+    .social {
+        font-family: $font-family;
+        color: #003566;
+        margin: 10px;
+        i {
+            padding: 10px;
+        }
+        a {
+            color: #023e8a;
+        }
+        a::after {
+            content: "+";
+            color: #003566;
+            font-family: $font-family;
+        }
+        a:nth-child(2)::before {
+            content: "-";
+            padding: 0px 10px;
+        }
+    }
+    .social-mail {
+        font-family: $font-family;
+        color: #003566;
+        margin: 10px;
+        i {
+            padding: 10px;
+        }
+        a {
+            color: #023e8a;
+        }
+    }
+}
+
+.testmonials {
+    .card {
+        font-family: $font-family;
+        color: #003566;
+    }
+    .card-body {
+        color: #003566;
+        font-family: $font-family;
+    }
+}
+
+#button {
+    display: inline-block;
+    background-color: #003566;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#button::after {
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-angle-up);
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+
+#button:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+
+#button:active {
+    background-color: #555;
+}
+
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
